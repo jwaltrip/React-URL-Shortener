@@ -9,6 +9,7 @@ const app = express()
 require("./database/connection")
 
 // import routes
+const urlRoutes = require("./routes/url.route")
 
 // setup middleware
 app.use(bodyParser.json())
@@ -16,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(logger('dev'))
 
 // setup routes
+app.use("/api/url", urlRoutes)
+
 app.get("/", (req, res) => {
   return res.json({ message: ".'. Hello Connected World .'." })
 })
