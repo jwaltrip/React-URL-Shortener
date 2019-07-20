@@ -1,0 +1,14 @@
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.text_input {
+  flex-grow: 5;
+}
+
+.btn_input {
+  flex-grow: 1;
+}
