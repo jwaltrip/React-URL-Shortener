@@ -6,6 +6,7 @@ const logger = require("morgan")
 const app = express()
 
 // setup connection to sql database
+require("./database/connection")
 
 // import routes
 
