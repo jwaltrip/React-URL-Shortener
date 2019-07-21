@@ -7,11 +7,7 @@ module.exports = sequelize.define("user", {
     allowNull: false,
     primaryKey: true
   },
-  firstName: {
-    type: Sequelize.TEXT,
-    allowNull: false
-  },
-  lastName: {
+  name: {
     type: Sequelize.TEXT,
     allowNull: false
   },
@@ -21,6 +17,10 @@ module.exports = sequelize.define("user", {
     allowNull: false
   },
   password: {
+    type: Sequelize.TEXT,
+    allowNull: false
+  },
+  avatar: {
     type: Sequelize.TEXT,
     allowNull: false
   },

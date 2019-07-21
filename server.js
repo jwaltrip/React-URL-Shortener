@@ -10,6 +10,7 @@ require("./database/connection")
 
 // import routes
 const urlRoutes = require("./routes/url.route")
+const userRoutes = require("./routes/user.route")
 
 // setup middleware
 app.use(bodyParser.json())
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(logger('dev'))
 
 // setup routes
+app.use("/", userRoutes)
 app.use("/api/url", urlRoutes)
 
 app.get("/", (req, res) => {
