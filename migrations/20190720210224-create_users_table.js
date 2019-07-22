@@ -16,11 +16,7 @@ module.exports = {
         allowNull: false,
         primaryKey: true
       },
-      firstName: {
-        type: Sequelize.TEXT,
-        allowNull: false
-      },
-      lastName: {
+      name: {
         type: Sequelize.TEXT,
         allowNull: false
       },
@@ -30,6 +26,10 @@ module.exports = {
         allowNull: false
       },
       password: {
+        type: Sequelize.TEXT,
+        allowNull: false
+      },
+      avatar: {
         type: Sequelize.TEXT,
         allowNull: false
       },

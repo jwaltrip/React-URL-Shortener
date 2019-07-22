@@ -2,6 +2,7 @@ require("dotenv").config()
 const express = require("express")
 const bodyParser = require("body-parser")
 const logger = require("morgan")
+const passport = require("passport")
 
 const app = express()
 
@@ -10,13 +11,17 @@ require("./database/connection")
 
 // import routes
 const urlRoutes = require("./routes/url.route")
+const userRoutes = require("./routes/user.route")
 
 // setup middleware
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(logger('dev'))
+app.use(passport.initialize());
+require('./passport')(passport);
 
 // setup routes
+app.use("/", userRoutes)
 app.use("/api/url", urlRoutes)
 
 app.get("/", (req, res) => {
