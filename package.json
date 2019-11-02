@@ -19,7 +19,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.1",
-    "sequelize": "^5.10.1",
+    "sequelize": "^5.15.1",
     "shortid": "^2.2.14",
     "validator": "^11.1.0"
   },
